@@ -1,2 +1,6 @@
-model\Carro.class
-controladores\AloMundo.class
+model\Marca.class
+controladores\TestarBanco.class
+model\Veiculo.class
+model\Modelo.class
+util\ConectaBD.class
+controladores\testeServlet.class

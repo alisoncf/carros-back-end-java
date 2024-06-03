@@ -18,11 +18,26 @@ import javax.sql.DataSource;
 public class ConectaBD {
     Connection con;
     Statement stmt;
-    public static String DataSetName = "jdbc/lojainfo";
+    public static String DataSetName = "jdbc/carros";
 
     public ConectaBD() {
     }
+    public String testarConexao()throws Exception{
+        
+        try {
+            ResultSet r = getResultset("select 1>0");
+            if (r.next()) {
+                return "Conexão bem sucedida!";
+            }
+               
+        } catch (Exception e) {
+            return "Conexão mal sucedida!" + e.getMessage();
+        }
+        return "Erro";
+            
+        
     
+    }
     public void executa(String sql) throws Exception {
         try {
             Context initContext = new InitialContext();

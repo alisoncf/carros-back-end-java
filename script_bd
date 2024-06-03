@@ -1,0 +1,11 @@
+#script de banco e dados
+create database carros;
+use carros;
+
+drop table if exists; #caso precise apagar
+
+create table marcas (
+	id integer not null auto_increment,
+	nome varchar(100),
+	primary key(id)
+);
